@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using SalesWebMvc.Models;
+using SalesWebMvc.Models.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -20,6 +21,14 @@ namespace SalesWebMvc.Controllers
 
         public IActionResult Index()
         {
+            return View();
+        }
+
+        public IActionResult About()
+        {
+            ViewData["Message"] = "Salles web MVC App from C# Course";
+            ViewData["Professor"] = "Nélio Alvez";
+
             return View();
         }
 
